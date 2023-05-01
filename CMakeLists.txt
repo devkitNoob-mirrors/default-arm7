@@ -24,6 +24,10 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 	-Wall
 )
 
+target_link_options(${PROJECT_NAME} PRIVATE
+	-Wl,--section-start,.main=0x02ff0000
+)
+
 target_sources(${PROJECT_NAME} PRIVATE
 	arm7_main.c
 )
