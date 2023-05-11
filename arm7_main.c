@@ -34,20 +34,25 @@ int main(int argc, char* argv[])
 	blkInit();
 #endif
 
-	// Set up devices (touch, sound, mic, camera, wireless)
+	// Set up touch screen driver
 	touchInit();
 	touchStartServer(80, MAIN_THREAD_PRIO);
 
 #ifdef ENABLE_SOUND
+	// Set up sound and mic driver
 	soundStartServer(MAIN_THREAD_PRIO-0x10);
+	micStartServer(MAIN_THREAD_PRIO-0x18);
 #endif
 
+	// TODO: Set up camera driver
+
 #ifdef ENABLE_WLMGR
+	// Set up wireless manager
 	wlmgrStartServer(MAIN_THREAD_PRIO-8);
 #endif
 
 #ifdef ENABLE_MAXMOD
-	// Maxmod
+	// Set up Maxmod
 	mmInstall(MAIN_THREAD_PRIO+1);
 #endif
 
