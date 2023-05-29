@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(default_arm7 LANGUAGES C CXX ASM)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-	set(CMAKE_INSTALL_PREFIX "${NDS_ROOT}" CACHE PATH "" FORCE)
+	set(CMAKE_INSTALL_PREFIX "${CALICO_ROOT}" CACHE PATH "" FORCE)
 endif()
 
 option(ENABLE_LOG    "Enable relaying debug messages to ARM9")
