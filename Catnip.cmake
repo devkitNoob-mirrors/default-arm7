@@ -1,8 +1,9 @@
 
-catnip_package(default_arm7 DEFAULT all)
+catnip_package(default_arm7)
 
 macro(_arm7_preset _name)
 	catnip_add_preset(${_name}
+		DEFAULT
 		TOOLSET NDS
 		PROCESSOR armv4t
 		BUILD_TYPE MinSizeRel
