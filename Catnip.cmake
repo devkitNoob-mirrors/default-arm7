@@ -33,7 +33,7 @@ _arm7_preset(ragdoll
 	ENABLE_SOUND=ON
 )
 
-_arm7_preset(munchkin
+_arm7_preset(maine
 	ENABLE_BLKDEV=ON
 	ENABLE_WLMGR=ON
 	ENABLE_SOUND=ON
